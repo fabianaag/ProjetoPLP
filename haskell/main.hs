@@ -19,13 +19,18 @@ menuCategorias = do
   putStrLn "2 - Conhecimentos Gerais"
 
 
-lerQuestoes_cc :: IO ()
-lerQuestoes_cc = do
-  handle <- openFile "questoes_cc.txt" ReadMode
-  contents <- hGetContents handle
-  let questao_linha_linha = lines contents
-  putStr $ unlines questao_linha_linha
-  hClose handle
+lerQuestoes :: String -> IO ()
+lerQuestoes categoria = do
+    if(categoria == "1") then do
+      handle <- openFile "questoes_cc.txt" ReadMode
+      contents <- hGetContents handle
+      putStrLn contents
+      hClose handle
+    else do
+      handle <- openFile "questoes_ge.txt" ReadMode
+      contents <- hGetContents handle
+      putStrLn contents
+      hClose handle
 
 
 main :: IO ()
@@ -35,4 +40,4 @@ main = do
  nome <- getLine
  menuCategorias
  categoria <- getLine
- lerQuestoes_cc
+ lerQuestoes categoria
