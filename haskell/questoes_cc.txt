@@ -1,0 +1,41 @@
+["Qual o valor em decimal do binario 00000111?",
+"A) 7",
+"B) 8",
+"C) 6",
+"D) 14"]
+
+["Qual alternativa nao contem um Hardware?",
+"A) Mouse",
+"B) Processador",
+"C) Chipset",
+"D) Debian"]
+
+["Principal modulo de um computador, onde estao conectados todos os perifericos",
+"A) CPU",
+"B) Placa mae",
+"C) Gabinete",
+"D) Entrada usb"]
+
+Qual o valor em decimal do binario 00010101?
+A) 21
+B) 8
+C) 20
+D) 14
+
+Pela ordem cronologica, marque a alternativa correta
+A) Abaco, Eniac, Chip, Transistor e Microprocessador
+B) Eniac, Abaco, Chip, Transistor e Microprocessador
+C) Abaco, Eniac, Transistor, Chip e Microprocessador.
+D) Abaco, Eniac, Chip, Microprocessador e Transistor
+
+Se X, entao Y. Nao Y, logo:
+A) Nao Y
+B) X
+C) Nao X
+D) Y
+
+O que eh mais rapido?
+A) HDD
+B) CD
+C) DVD
+D) SSD
