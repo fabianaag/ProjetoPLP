@@ -11,7 +11,6 @@ cabecalho = do
  putStrLn (".  Teste seus conhecimentos e concorra ao premio maximo de R$ 1 milhao  .")
  putStrLn (". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .")
 
-
 menuCategorias :: IO ()
 menuCategorias = do
   putStrLn "Qual categoria de questoes voce deseja?"
