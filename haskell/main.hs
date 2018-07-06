@@ -26,8 +26,6 @@ converterListaParaMatriz (p:a:b:c:d:r:list)
 randomizaMatriz :: [[[Char]]] -> [[Char]]-> [[[Char]]]
 randomizaMatriz list newHead = newHead : [x | x <- list, x /= newHead]
 
-
-
 cabecalho :: IO ()
 cabecalho = do
  putStrLn (". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .")
@@ -38,13 +36,11 @@ cabecalho = do
  putStrLn (".  Teste seus conhecimentos e concorra ao premio maximo de R$ 1 milhao  .")
  putStrLn (". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .")
 
-
 menuCategorias :: IO ()
 menuCategorias = do
   putStrLn "Qual categoria de questoes voce deseja?"
   putStrLn "1 - Computacao"
   putStrLn "2 - Conhecimentos Gerais"
-
 
 lerQuestoes :: String -> IO ([[Char]])
 lerQuestoes categoria = do
@@ -59,7 +55,6 @@ lerQuestoes categoria = do
       let questoes = (splitOn (==';') contents)
       return ((head questoes) : (removeN (tail questoes))) {- [[CHAR]]-}
 
-
 joga :: [[[Char]]] -> Int -> IO ()
 joga [] _ = print "Tu ganho mizeravi"
 joga questoes premio =  do
@@ -73,6 +68,7 @@ joga questoes premio =  do
     joga (tail questoes) (premio+100)
   else do
     print "Erro Mizeravi"
+
 main :: IO ()
 main = do
  cabecalho

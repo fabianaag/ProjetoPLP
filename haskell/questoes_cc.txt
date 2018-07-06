@@ -1,41 +1,74 @@
+-- faceis
+-- 1
 ["Qual o valor em decimal do binario 00000111?",
 "A) 7",
 "B) 8",
 "C) 6",
-"D) 14"]
+"D) 14",
+"A"]
 
+-- 2
 ["Qual alternativa nao contem um Hardware?",
 "A) Mouse",
 "B) Processador",
 "C) Chipset",
-"D) Debian"]
+"D) Debian",
+"D"]
 
+ -- 3
 ["Principal modulo de um computador, onde estao conectados todos os perifericos",
 "A) CPU",
 "B) Placa mae",
 "C) Gabinete",
-"D) Entrada usb"]
+"D) Entrada usb",
+"B"]
 
-Qual o valor em decimal do binario 00010101?
-A) 21
-B) 8
-C) 20
-D) 14
+-- medias
+-- 1
+["Na computacao, qual tecnologia substituiu a valvula?",
+"A) Capacitor",
+"B) Resistor",
+"C) Transistor",
+"D) Diodo",
+"C"]
 
-Pela ordem cronologica, marque a alternativa correta
-A) Abaco, Eniac, Chip, Transistor e Microprocessador
-B) Eniac, Abaco, Chip, Transistor e Microprocessador
-C) Abaco, Eniac, Transistor, Chip e Microprocessador.
-D) Abaco, Eniac, Chip, Microprocessador e Transistor
+-- 2
+"Dizer que a classe A estende a classe B eh o mesmo que dizer que:",
+"A) As classes sao irmas",
+"B) A eh superclasse de B",
+"C) B eh filha de A",
+"D) A eh filha de B",
+"D"]
+    
+-- 3
+["O que eh um ENIAC",
+"A) Um computador",
+"B) Uma configuracao",
+"C) Um congresso",
+"D) Um jogo",
+"A"]
 
-Se X, entao Y. Nao Y, logo:
-A) Nao Y
-B) X
-C) Nao X
-D) Y
-
-O que eh mais rapido?
-A) HDD
-B) CD
-C) DVD
-D) SSD
+-- dificeis
+-- 1
+["Pela ordem cronologica, marque a alternativa correta",
+"A) Abaco, Eniac, Chip, Transistor e Microprocessador",
+"B) Eniac, Abaco, Chip, Transistor e Microprocessador",
+"C) Abaco, Eniac, Transistor, Chip e Microprocessador.",
+"D) Abaco, Eniac, Chip, Microprocessador e Transistor",
+"C"]
+    
+-- 2
+["Se X, entao Y. Nao Y, logo: ",
+"A) Nao Y",
+"B) X",
+"C) Nao X",
+"D) Y",
+"C"]
+    
+-- 3
+["O que eh mais rapido? ",
+"A) HDD",
+"B) CD",
+"C) DVD",
+"D) SSD",
+"D"]
