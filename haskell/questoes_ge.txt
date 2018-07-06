@@ -15,6 +15,14 @@
 "D) Progresso e Ordem",
 "C"]
 
+-- 3
+["Qual a traducao da palavra inglesa 'horse'?",
+"A) Casa",
+"B) Cavalo",
+"C) Elefante",
+"D) Hipopotamo",
+"B"]
+
 -- medias
 -- 1
 ["A frase 'I have a dream' eh associada a: ",
@@ -30,6 +38,14 @@
 "B) China e Nepal",
 "C) Guiana Francesa e Estados Unidos",
 "D) Canada e Bangladesh",
+"A"]
+
+-- 3
+[Qual foi o primeiro recurso usado para explicar a origem das coisas?",
+"A) Mitologia",
+"B) Filosofia",
+"C) Matematica",
+"D) Astronomia",
 "A"]
 
 -- dificeis
@@ -48,3 +64,11 @@
 "C) Mesolitico",
 "D) Idade Media",
 "B"]
+
+-- 3
+["Qual desses filmes foi baseado na obra de Shakespeare?",
+"A) Muito Barulho por Nada (2012)",
+"B) Capitaes de Areia (2011)",
+"C) A Dama das Camelias (1936)",
+"D) Excalibur",
+"A"]
