@@ -10,7 +10,8 @@ cabecalho:-
   write(".  Teste seus conhecimentos e concorra ao premio maximo de R$ 1 milhao  ."),nl,
   write(". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."),nl.
 
-
+questoesCC("Qual alternativa nao contem um Hardware?\nA) massinha geras", "a").
+questoesCC("Palhacos Loko HAhaha\nB) Ta em ChoKk ??", "b").
 
 main:-
   cabecalho,
@@ -20,4 +21,6 @@ main:-
   writeln(" 1 - Computacao"),
   writeln(" 2 - Conhecimentos Gerais"),
   read_line_to_string(user_input, Opcao),
-  write("Voce escolheu "), write(Opcao), writeln(", boa sorte!").
+  write("Voce escolheu "), write(Opcao), writeln(", boa sorte!"),
+  questoesCC(Questao, Resposta),
+  writeln(Questao).
