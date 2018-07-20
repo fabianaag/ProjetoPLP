@@ -25,8 +25,15 @@ questao_dificil_ge("Qual a altura em metros da rede de volei masculino e feminin
 questao_dificil_ge("Em que periodo pre-historico o fogo foi descoberto?\nA) Neolitico\nB) Paleolitico\nC) Mesolitico\nD) Idade Media","b").
 questao_dificil_ge("Qual desses filmes foi baseado na obra de Shakespeare?\nA) Muito Barulho por Nada (2012)\nB) Capitaes de Areia (2011)\nC) A Dama das Camelias (1936)\nD) Excalibur","a").
 
+escolha_categoria("1", "Computacao").
+escolha_categoria("2", "Conhecimentos Gerais").
+
+%Regras
+categoria_cc():- write("1 - Computacao"), nl.
+categoria_ge():- write("2 - Conhecimentos Gerais"), nl.
+
 cabecalho:-
-    write(". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."), nl,
+    write(". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."),nl,
     write(". ______________________________ S H O W ______________________________ ."), nl,
     write(". ________________________________ D O ________________________________ ."), nl,
     write(". ____________________________ M I L H A O ____________________________ ."), nl,
@@ -36,16 +43,16 @@ cabecalho:-
 
 main:-
     cabecalho,
-    
+
     write("Qual o seu nome? "),
     read_line_to_string(user_input, Nome),
-    
+
     write(Nome), writeln(", qual categoria de questoes voce deseja?"),
-    writeln(" 1 - Computacao"),
-    writeln(" 2 - Conhecimentos Gerais"),
+    categoria_cc(),
+    categoria_ge(),
     read_line_to_string(user_input, Opcao),
     
-    write("Voce escolheu "), write(Opcao), writeln(", boa sorte!"),
-    
+    write("Voce escolheu "), escolha_categoria(Opcao, X), write(X), writeln(", boa sorte!"),
+
     questao_facil_ge1(Questao, Resposta),
     writeln(Questao).
