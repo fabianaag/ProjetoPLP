@@ -1,0 +1,74 @@
+-- faceis
+-- 1
+["Quanto vale 2+2?",
+"A) 5",
+"B) 7",
+"C) 4",
+"D) 2",
+"C"]
+
+-- 2
+["O que esta escrito na bandeira do Brasil?",
+"A) Ordem e Regresso",
+"B) Ordem e Retrocesso",
+"C) Ordem e Progresso",
+"D) Progresso e Ordem",
+"C"]
+
+-- 3
+["Qual a traducao da palavra inglesa 'horse'?",
+"A) Casa",
+"B) Cavalo",
+"C) Elefante",
+"D) Hipopotamo",
+"B"]
+
+-- medias
+-- 1
+["A frase 'I have a dream' eh associada a: ",
+"A) George W. Bush",
+"B) Martin Luther King",
+"C) Michael Jackson",
+"D) Snoop Dogg",
+"B"]
+
+-- 2
+["Qual o maior e o menor pais do mundo? ",
+"A) Russia e Vaticano",
+"B) China e Nepal",
+"C) Guiana Francesa e Estados Unidos",
+"D) Canada e Bangladesh",
+"A"]
+
+-- 3
+[Qual foi o primeiro recurso usado para explicar a origem das coisas?",
+"A) Mitologia",
+"B) Filosofia",
+"C) Matematica",
+"D) Astronomia",
+"A"]
+
+-- dificeis
+-- 1
+["Qual a altura em metros da rede de volei masculino e feminino?",
+"A) 2,5 e 2,0",
+"B) 2,45 para ambos",
+"C) 1,8 e 1,55",
+"D) 2,43 e 2,24",
+"D"]
+
+-- 2
+["Em que periodo pre-historico o fogo foi descoberto?",
+"A) Neolitico",
+"B) Paleolitico",
+"C) Mesolitico",
+"D) Idade Media",
+"B"]
+
+-- 3
+["Qual desses filmes foi baseado na obra de Shakespeare?",
+"A) Muito Barulho por Nada (2012)",
+"B) Capitaes de Areia (2011)",
+"C) A Dama das Camelias (1936)",
+"D) Excalibur",
+"A"]
