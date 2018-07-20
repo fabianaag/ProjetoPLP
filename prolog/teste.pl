@@ -9,8 +9,12 @@ cabecalho:-
   write(".  Teste seus conhecimentos e concorra ao premio maximo de R$ 1 milhao  ."),nl,
   write(". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."),nl.
 
-respostas(Numero, Resposta)
-perguntas(Numero, Pergunta)
+
+pergunta1CC("Qual o valor em decimal do binario 00000111?
+							A) 7
+							B) 8
+							C) 6
+							D) 14","a")
 
 main:-
   cabecalho,
