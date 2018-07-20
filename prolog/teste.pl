@@ -1,4 +1,3 @@
-%! Define main como a regra principal do programa
 :- initialization(main).
 
 cabecalho:-
@@ -10,12 +9,12 @@ cabecalho:-
   write(".  Teste seus conhecimentos e concorra ao premio maximo de R$ 1 milhao  ."),nl,
   write(". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."),nl.
 
-questoesCC("Qual alternativa nao contem um Hardware?\nA) massinha geras", "a").
-questoesCC("Palhacos Loko HAhaha\nB) Ta em ChoKk ??", "b").
+respostas(Numero, Resposta)
+perguntas(Numero, Pergunta)
 
 main:-
   cabecalho,
-  write("Bota teu nome aí arrombado: "),
+  write("Bota teu nome aí: "),
   read_line_to_string(user_input, Nome),
   write(Nome), writeln(", qual categoria de questoes voce deseja?"),
   writeln(" 1 - Computacao"),
