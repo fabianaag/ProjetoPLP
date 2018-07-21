@@ -32,6 +32,9 @@ escolha_categoria("2", "Conhecimentos Gerais").
 categoria_cc():- write("1 - Computacao"), nl.
 categoria_ge():- write("2 - Conhecimentos Gerais"), nl.
 
+verifica_resposta(Resposta, AlternCorreta, Resultado):- Resposta =:= AlternCorreta -> Resultado = 1; Resultado = 0.
+imprime_resultado(R):- R =:= 1 -> write("Voce acertou"); write("Voce errou!").
+
 cabecalho:-
     write(". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."),nl,
     write(". ______________________________ S H O W ______________________________ ."), nl,
@@ -54,5 +57,14 @@ main:-
     
     write("Voce escolheu "), escolha_categoria(Opcao, X), write(X), writeln(", boa sorte!"),
 
-    questao_facil_ge1(Questao, Resposta),
-    writeln(Questao).
+    questao_facil_ge1(Pergunta, _), write(Pergunta), nl,
+    
+    read_line_to_string(user_input, Resposta),
+    
+    write("Voce escolheu: "), write(Resposta), nl,
+    
+    questao_facil_ge1(_, AlternCorreta),
+    write("Correta: "), write(AlternCorreta), nl,
+    
+    verifica_resposta(Resposta, AlternCorreta, Resultado),
+    imprime_resultado(Resultado).
