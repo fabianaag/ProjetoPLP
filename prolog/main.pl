@@ -13,9 +13,9 @@ questao_dificil_cc1("Pela ordem cronologica, marque a alternativa correta.\nA) A
 questao_dificil_cc2("Se X, entao Y. Nao Y, logo:\nA) Nao Y\nB) X\nC) Nao X\nD) Y","c").
 questao_dificil_cc3("O que eh mais rapido?\nA) HDD\nB) CD\nC) DVD\nD) SSD","d").
 
-questao_facil_ge1("Quanto vale 2+2?\nA) 5\nB) 7\nC) 4\nD) 2","c").
-questao_facil_ge2("O que esta escrito na bandeira do Brasil?\nA) Ordem e Regresso\nB) Ordem e Retrocesso\nC) Ordem e Progresso\nD) Progresso e Ordem","c").
-questao_facil_ge3("Qual a traducao da palavra inglesa 'horse'?\nA) Casa\nB) Cavalo\nC) Elefante\nD) Hipopotamo","b").
+questao_facil_ge("Quanto vale 2+2?\nA) 5\nB) 7\nC) 4\nD) 2","c").
+questao_facil_ge("O que esta escrito na bandeira do Brasil?\nA) Ordem e Regresso\nB) Ordem e Retrocesso\nC) Ordem e Progresso\nD) Progresso e Ordem","c").
+questao_facil_ge("Qual a traducao da palavra inglesa 'horse'?\nA) Casa\nB) Cavalo\nC) Elefante\nD) Hipopotamo","b").
 
 questao_media_ge1("A frase 'I have a dream' eh associada a:\nA) George W. Bush\nB) Martin Luther King\nC) Michael Jackson\nD) Snoop Dogg","b").
 questao_media_ge2("Qual o maior e o menor pais do mundo? \nA) Russia e Vaticano\nB) China e Nepal\nC) Guiana Francesa e Estados Unidos\nD) Canada e Bangladesh","a").
@@ -26,34 +26,20 @@ questao_dificil_ge2("Em que periodo pre-historico o fogo foi descoberto?\nA) Neo
 questao_dificil_ge3("Qual desses filmes foi baseado na obra de Shakespeare?\nA) Muito Barulho por Nada (2012)\nB) Capitaes de Areia (2011)\nC) A Dama das Camelias (1936)\nD) Excalibur","a").
 
 
-lista_perguntas_ge:- L([questao_facil_ge1(P, R), questao_facil_ge2(P, R),
-                      questao_media_ge1(P, R), questao_media_ge2(P, R),
-                      questao_dificil_ge1(P, R), questao_dificil_ge2(P, R)]).
+lista_perguntas_facil_ge(ListaFacilGe):-
+          findall(Pfg, questao_facil_ge(Pfg, Rfg), ListaFacilGe).
 
-% itera_sobre_perguntas([]).
+
+itera_sobre_perguntas([]).
 itera_sobre_perguntas([H|T]):-
-                        H(Pergunta, _), writeln(Pergunta),
+                        writeln(H),
                         read_line_to_string(user_input, Resposta),
                         write("Voce escolheu: "), writeln(Resposta),
-                        H(_, AlternCorreta),
-                        write("Correta: "), writeln(Resposta),
+                        questao_facil_ge(H, AlternCorreta),
+                        write("Correta: "), writeln(AlternCorreta),
                         verifica_resposta(Resposta, AlternCorreta, Resultado),
                         imprime_resultado(Resposta),
                         itera_sobre_perguntas(T).
-
-
-%
-% questao_facil_ge1(Pergunta, _), write(Pergunta), nl,
-%
-% read_line_to_string(user_input, Resposta),
-%
-% write("Voce escolheu: "), write(Resposta), nl,
-%
-% questao_facil_ge1(_, AlternCorreta),
-% write("Correta: "), write(AlternCorreta), nl,
-%
-% verifica_resposta(Resposta, AlternCorreta, Resultado),
-% imprime_resultado(Resultado).
 
 
 escolha_categoria("1", "Computacao").
@@ -90,18 +76,5 @@ main:-
 
     write("Voce escolheu "), escolha_categoria(Opcao, X), write(X), writeln(", boa sorte!"),
 
-    writeln(lista_perguntas_ge),
-
-    itera_sobre_perguntas(lista_perguntas_ge).
-
-    % questao_facil_ge1(Pergunta, _), write(Pergunta), nl,
-    %
-    % read_line_to_string(user_input, Resposta),
-    %
-    % write("Voce escolheu: "), write(Resposta), nl,
-    %
-    % questao_facil_ge1(_, AlternCorreta),
-    % write("Correta: "), write(AlternCorreta), nl,
-    %
-    % verifica_resposta(Resposta, AlternCorreta, Resultado),
-    % imprime_resultado(Resultado).
+    lista_perguntas_facil_ge(S),
+    itera_sobre_perguntas(S).
