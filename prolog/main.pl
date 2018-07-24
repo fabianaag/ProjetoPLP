@@ -26,10 +26,13 @@ questao_dificil_ge2("Em que periodo pre-historico o fogo foi descoberto?\nA) Neo
 questao_dificil_ge3("Qual desses filmes foi baseado na obra de Shakespeare?\nA) Muito Barulho por Nada (2012)\nB) Capitaes de Areia (2011)\nC) A Dama das Camelias (1936)\nD) Excalibur","a").
 
 
+% cria lista de fatos (perguntas, respostas), nesse caso ele cria uma lista APENAS das perguntas
+% para serem checados os fatos no itera_sobre_perguntas
 lista_perguntas_facil_ge(ListaFacilGe):-
           findall(Pfg, questao_facil_ge(Pfg, Rfg), ListaFacilGe).
 
 
+% Itera sobre as perguntas, OBS.: tem que ver se precisa fazer uma iteração pra cada tipo de pergunta (facil, medio, dificil)
 itera_sobre_perguntas([]).
 itera_sobre_perguntas([H|T]):-
                         writeln(H),
@@ -76,5 +79,5 @@ main:-
 
     write("Voce escolheu "), escolha_categoria(Opcao, X), write(X), writeln(", boa sorte!"),
 
-    lista_perguntas_facil_ge(S),
-    itera_sobre_perguntas(S).
+    lista_perguntas_facil_ge(Fg),
+    itera_sobre_perguntas(Fg).
