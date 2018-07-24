@@ -1,64 +1,36 @@
 :- initialization(main).
 
-%Fatos
-questao_facil_cc1("Qual o valor em decimal do binario 00000111?\nA) 7\nB) 8\nC) 6\nD) 14","a").
-questao_facil_cc2("Qual alternativa nao contem um Hardware?\nA) Mouse\nB) Processador\nC) Chipset\nD) Debian","d").
-questao_facil_cc3("Principal modulo de um computador, onde estao conectados todos os perifericos:\nA) CPU\nB) Placa mae\nC) Gabinete\nD) Entrada usb","b").
+% Fatos
+categoria("1", "Computacao").
+categoria("2", "Conhecimentos Gerais").
 
-questao_media_cc1("Na computacao, qual tecnologia substituiu a valvula?\nA) Capacitor\nB) Resistor\nC) Transistor\nD) Diodo","c").
-questao_media_cc2("Dizer que a classe A estende a classe B eh o mesmo que dizer que:\nA) As classes sao irmas\nB) A eh superclasse de B\nC) B eh filha de A\nD) A eh filha de B","d").
-questao_media_cc3("O que eh um ENIAC?\nA) Um computador\nB) Uma configuracao\nC) Um congresso\nD) Um jogo","a").
+questao("1", "f", 1, "Qual o valor em decimal do binario 00000111?", "A) 7", "B) 8", "C) 6", "D) 14", "a").
+questao("1", "f", 2, "Qual alternativa nao contem um Hardware?", "A) Mouse", "B) Processador", "C) Chipset", "D) Debian", "d").
+questao("1", "f", 3, "Principal modulo de um computador, onde estao conectados todos os perifericos:", "A) CPU", "B) Placa mae", "C) Gabinete", "D) Entrada usb", "b").
 
-questao_dificil_cc1("Pela ordem cronologica, marque a alternativa correta.\nA) Abaco, Eniac, Chip, Transistor e Microprocessador\nB) Eniac, Abaco, Chip, Transistor e Microprocessador\nC) Abaco, Eniac, Transistor, Chip e Microprocessador\nD) Abaco, Eniac, Chip, Microprocessador e Transistor","c").
-questao_dificil_cc2("Se X, entao Y. Nao Y, logo:\nA) Nao Y\nB) X\nC) Nao X\nD) Y","c").
-questao_dificil_cc3("O que eh mais rapido?\nA) HDD\nB) CD\nC) DVD\nD) SSD","d").
+questao("1", "m", 1, "Na computacao, qual tecnologia substituiu a valvula?", "A) Capacitor", "B) Resistor", "C) Transistor", "D) Diodo", "c").
+questao("1", "m", 2, "Dizer que a classe A estende a classe B eh o mesmo que dizer que:", "A) As classes sao irmas", "B) A eh superclasse de B", "C) B eh filha de A", "D) A eh filha de B", "d").
+questao("1", "m", 3, "O que eh um ENIAC?", "A) Um computador", "B) Uma configuracao", "C) Um congresso", "D) Um jogo", "a").
 
-questao_facil_ge("Quanto vale 2+2?\nA) 5\nB) 7\nC) 4\nD) 2","c").
-questao_facil_ge("O que esta escrito na bandeira do Brasil?\nA) Ordem e Regresso\nB) Ordem e Retrocesso\nC) Ordem e Progresso\nD) Progresso e Ordem","c").
-questao_facil_ge("Qual a traducao da palavra inglesa 'horse'?\nA) Casa\nB) Cavalo\nC) Elefante\nD) Hipopotamo","b").
+questao("1", "d", 1, "Pela ordem cronologica, marque a alternativa correta.", "A) Abaco, Eniac, Chip, Transistor e Microprocessador", "B) Eniac, Abaco, Chip, Transistor e Microprocessador", "C) Abaco, Eniac, Transistor, Chip e Microprocessador", "D) Abaco, Eniac, Chip, Microprocessador e Transistor", "c").
+questao("1", "d", 2, "Se X, entao Y. Nao Y, logo:", "A) Nao Y", "B) X", "C) Nao X", "D) Y", "c").
+questao("1", "d", 3, "O que eh mais rapido?", "A) HDD", "B) CD", "C) DVD", "D) SSD", "d").
 
-questao_media_ge1("A frase 'I have a dream' eh associada a:\nA) George W. Bush\nB) Martin Luther King\nC) Michael Jackson\nD) Snoop Dogg","b").
-questao_media_ge2("Qual o maior e o menor pais do mundo? \nA) Russia e Vaticano\nB) China e Nepal\nC) Guiana Francesa e Estados Unidos\nD) Canada e Bangladesh","a").
-questao_media_ge3("Qual foi o primeiro recurso usado para explicar a origem das coisas?\nA) Mitologia\nB) Filosofia\nC) Matematica\nD) Astronomia","a").
+questao("2", "f", 1, "Quanto vale 2+2?", "A) 5", "B) 7", "C) 4", "D) 2", "c").
+questao("2", "f", 2, "O que esta escrito na bandeira do Brasil?", "A) Ordem e Regresso", "B) Ordem e Retrocesso", "C) Ordem e Progresso", "D) Progresso e Ordem", "c").
+questao("2", "f", 3, "Qual a traducao da palavra inglesa 'horse'?", "A) Casa", "B) Cavalo", "C) Elefante", "D) Hipopotamo", "b").
 
-questao_dificil_ge1("Qual a altura em metros da rede de volei masculino e feminino?\nA) 2,5 e 2,0\nB) 2,45 para ambos\nC) 1,8 e 1,55\nD) 2,43 e 2,24","d").
-questao_dificil_ge2("Em que periodo pre-historico o fogo foi descoberto?\nA) Neolitico\nB) Paleolitico\nC) Mesolitico\nD) Idade Media","b").
-questao_dificil_ge3("Qual desses filmes foi baseado na obra de Shakespeare?\nA) Muito Barulho por Nada (2012)\nB) Capitaes de Areia (2011)\nC) A Dama das Camelias (1936)\nD) Excalibur","a").
+questao("2", "m", 1, "A frase 'I have a dream' eh associada a:", "A) George W. Bush", "B) Martin Luther King", "C) Michael Jackson", "D) Snoop Dogg", "b").
+questao("2", "m", 2, "Qual o maior e o menor pais do mundo? ", "A) Russia e Vaticano", "B) China e Nepal", "C) Guiana Francesa e Estados Unidos", "D) Canada e Bangladesh", "a").
+questao("2", "m", 3, "Qual foi o primeiro recurso usado para explicar a origem das coisas?", "A) Mitologia", "B) Filosofia", "C) Matematica", "D) Astronomia", "a").
 
+questao("2", "d", 1, "Qual a altura em metros da rede de volei masculino e feminino?", "A) 2,5 e 2,0", "B) 2,45 para ambos", "C) 1,8 e 1,55", "D) 2,43 e 2,24", "d").
+questao("2", "d", 2, "Em que periodo pre-historico o fogo foi descoberto?", "A) Neolitico", "B) Paleolitico", "C) Mesolitico", "D) Idade Media", "b").
+questao("2", "d", 3, "Qual desses filmes foi baseado na obra de Shakespeare?", "A) Muito Barulho por Nada (2012)", "B) Capitaes de Areia (2011)", "C) A Dama das Camelias (1936)", "D) Excalibur", "a").
 
-% cria lista de fatos (perguntas, respostas), nesse caso ele cria uma lista APENAS das perguntas
-% para serem checados os fatos no itera_sobre_perguntas
-lista_perguntas_facil_ge(ListaFacilGe):-
-          findall(Pfg, questao_facil_ge(Pfg, Rfg), ListaFacilGe).
-
-
-% Itera sobre as perguntas, OBS.: tem que ver se precisa fazer uma iteração pra cada tipo de pergunta (facil, medio, dificil)
-itera_sobre_perguntas([]).
-itera_sobre_perguntas([H|T]):-
-                        writeln(H),
-                        read_line_to_string(user_input, Resposta),
-                        write("Voce escolheu: "), writeln(Resposta),
-                        questao_facil_ge(H, AlternCorreta),
-                        write("Correta: "), writeln(AlternCorreta),
-                        verifica_resposta(Resposta, AlternCorreta, Resultado),
-                        imprime_resultado(Resultado),
-                        itera_sobre_perguntas(T).
-
-
-escolha_categoria("1", "Computacao").
-escolha_categoria("2", "Conhecimentos Gerais").
-
-%Regras
-categoria_cc():- write("1 - Computacao"), nl.
-categoria_ge():- write("2 - Conhecimentos Gerais"), nl.
-
-verifica_resposta(Resposta, AlternCorreta, Resultado):-
-                  Resposta =:= AlternCorreta -> Resultado = 1; Resultado = 0.
-
-imprime_resultado(R):- R =:= 1 -> write("Voce acertou"), nl; write("Voce errou!"), nl.
-
-cabecalho:-
-    write(". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."),nl,
+% Regras
+cabecalho :-
+    write(". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."), nl,
     write(". ______________________________ S H O W ______________________________ ."), nl,
     write(". ________________________________ D O ________________________________ ."), nl,
     write(". ____________________________ M I L H A O ____________________________ ."), nl,
@@ -66,18 +38,81 @@ cabecalho:-
     write(".  Teste seus conhecimentos e concorra ao premio maximo de R$ 1 milhao  ."), nl,
     write(". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."), nl.
 
-main:-
-    cabecalho,
-
+leitura_nome(Nome) :-
     write("Qual o seu nome? "),
-    read_line_to_string(user_input, Nome),
+    read_line_to_string(user_input, Nome).
 
-    write(Nome), writeln(", qual categoria de questoes voce deseja?"),
-    categoria_cc(),
-    categoria_ge(),
-    read_line_to_string(user_input, Opcao),
+leitura_categoria(Nome, Opcao) :-
+    write(Nome),
+    write(", qual categoria de questoes voce deseja?"), nl,
+    write("1 - Computacao"), nl,
+    write("2 - Conhecimentos Gerais"), nl,
+    read_line_to_string(user_input, Opcao).
 
-    write("Voce escolheu "), escolha_categoria(Opcao, X), write(X), writeln(", boa sorte!"),
+impressao_categoria(Opcao) :-
+    write("Voce escolheu "),
+    categoria(Opcao, TextoCategoria),
+    write(TextoCategoria),
+    write(", boa sorte!"), nl.
+    
+nivel(Acertos, Nivel) :-
+    (
+    Acertos =< 2 -> Nivel = "f";
+    Acertos =< 4 -> Nivel = "m";
+    Nivel = "d"
+    ).
 
-    lista_perguntas_facil_ge(Fg),
-    itera_sobre_perguntas(Fg).
+indice_aleatorio(Indice) :- random_between(1, 3, Indice).
+
+impressao_pergunta(Opcao, Nivel, Indice) :-
+    questao(Opcao, Nivel, Indice, Pergunta, A, B, C, D, _),
+    write(Pergunta), nl,
+    write(A), nl,
+    write(B), nl,
+    write(C), nl,
+    write(D), nl.
+
+leitura_resposta(Resposta) :- read_line_to_string(user_input, Resposta).
+
+impressao_resposta(Resposta) :-
+    write("Voce escolheu: "),
+    write(Resposta), nl.
+
+impressao_alternativa_correta(Opcao, Nivel, Indice, AlternativaCorreta) :-
+    questao(Opcao, Nivel, Indice, _, _, _, _, _, AlternativaCorreta),
+    write("Correta: "),
+    write(AlternativaCorreta), nl.
+
+verifica_resposta(Resposta, AlternativaCorreta, Resultado) :-
+    Resposta =:= AlternativaCorreta -> Resultado = 1;
+    Resultado = 0.
+
+imprime_resultado(Resultado) :-
+    Resultado =:= 1 -> write("Voce acertou");
+    write("Voce errou!").
+
+inicio :-
+    cabecalho,
+    
+    leitura_nome(Nome),
+    
+    leitura_categoria(Nome, Opcao),
+    impressao_categoria(Opcao),
+    
+    Acertos is 0,
+    nivel(Acertos, Nivel),
+    
+    indice_aleatorio(Indice),
+    
+    impressao_pergunta(Opcao, Nivel, Indice),
+
+    leitura_resposta(Resposta),
+    impressao_resposta(Resposta),
+    
+    impressao_alternativa_correta(Opcao, Nivel, Indice, AlternativaCorreta),
+    
+    verifica_resposta(Resposta, AlternativaCorreta, Resultado),
+    imprime_resultado(Resultado).
+    
+main :-
+    inicio.
