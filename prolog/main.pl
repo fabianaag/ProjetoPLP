@@ -41,7 +41,7 @@ itera_sobre_perguntas([H|T]):-
                         questao_facil_ge(H, AlternCorreta),
                         write("Correta: "), writeln(AlternCorreta),
                         verifica_resposta(Resposta, AlternCorreta, Resultado),
-                        imprime_resultado(Resposta),
+                        imprime_resultado(Resultado),
                         itera_sobre_perguntas(T).
 
 
@@ -55,7 +55,7 @@ categoria_ge():- write("2 - Conhecimentos Gerais"), nl.
 verifica_resposta(Resposta, AlternCorreta, Resultado):-
                   Resposta =:= AlternCorreta -> Resultado = 1; Resultado = 0.
 
-imprime_resultado(R):- R =:= 1 -> write("Voce acertou"); write("Voce errou!").
+imprime_resultado(R):- R =:= 1 -> write("Voce acertou"), nl; write("Voce errou!"), nl.
 
 cabecalho:-
     write(". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."),nl,
