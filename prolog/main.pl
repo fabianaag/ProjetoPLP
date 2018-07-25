@@ -54,7 +54,7 @@ impressao_categoria(Opcao) :-
     categoria(Opcao, TextoCategoria),
     write(TextoCategoria),
     write(", boa sorte!"), nl.
-    
+
 nivel(Acertos, Nivel) :-
     (
     Acertos =< 2 -> Nivel = "f";
@@ -88,31 +88,37 @@ verifica_resposta(Resposta, AlternativaCorreta, Resultado) :-
     Resultado = 0.
 
 imprime_resultado(Resultado) :-
-    Resultado =:= 1 -> write("Voce acertou");
-    write("Voce errou!").
+    Resultado =:= 1 -> writeln("Voce acertou");
+    writeln("Voce errou!"), halt(0).
+
+loop(Opcao, Acertos):-
+      nivel(Acertos, Nivel),
+
+      indice_aleatorio(Indice),
+
+      impressao_pergunta(Opcao, Nivel, Indice),
+
+      leitura_resposta(Resposta),
+      impressao_resposta(Resposta),
+
+      impressao_alternativa_correta(Opcao, Nivel, Indice, AlternativaCorreta),
+
+      verifica_resposta(Resposta, AlternativaCorreta, Resultado),
+      imprime_resultado(Resultado),
+      Acertos1 is Acertos + 1,
+      loop(Opcao, Acertos1).
 
 inicio :-
     cabecalho,
-    
+
     leitura_nome(Nome),
-    
+
     leitura_categoria(Nome, Opcao),
     impressao_categoria(Opcao),
-    
-    Acertos is 0,
-    nivel(Acertos, Nivel),
-    
-    indice_aleatorio(Indice),
-    
-    impressao_pergunta(Opcao, Nivel, Indice),
 
-    leitura_resposta(Resposta),
-    impressao_resposta(Resposta),
-    
-    impressao_alternativa_correta(Opcao, Nivel, Indice, AlternativaCorreta),
-    
-    verifica_resposta(Resposta, AlternativaCorreta, Resultado),
-    imprime_resultado(Resultado).
-    
+    Acertos is 0,
+    loop(Opcao, Acertos).
+
 main :-
-    inicio.
+    inicio,
+    halt(0).
