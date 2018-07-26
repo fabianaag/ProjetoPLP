@@ -37,7 +37,29 @@ escolha_categoria("2", "Conhecimentos Gerais").
 categoria_cc():- write("1 - Computacao"), nl.
 categoria_ge():- write("2 - Conhecimentos Gerais"), nl.
 
+add_elem_inicio(X, L, [X|L]).
+add_elem_fim(T, [H], L):- add_elem_inicio(H, [T], L).
+add_elem_fim(N, [H|T], L):- add_elem_fim(N, T, X), add_elem_inicio(H, X, L).
 
+rem_elem(Y, [Y], []).
+rem_elem(X, [X|List1], List1).
+rem_elem(X, [Y|List], [Y|List1]) :- rem_elem(X, List, List1).
+
+escolher_perguntas([], []).
+escolher_perguntas(List, List3) :-
+    length(List, Length),
+    random(0, Length, Index),
+    nth0(Index, List, Elem),
+    
+    add_elem_inicio(Elem, [], List1),
+    rem_elem(Elem, List, List2),
+    
+    length(List2, Length2),
+    random(0, Length2, Index2),
+    nth0(Index2, List2, Elem2),
+    
+    add_elem_fim(Elem2, List1, List3).
+    %rem_elem(Elem2, List2, List4).
 
 cabecalho:-
      write(". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."), nl,
@@ -63,4 +85,5 @@ main:-
 
 
    lista_perguntas_facil_ge(Fg),
-   itera_sobre_perguntas(Fg).
+   escolher_perguntas(Fg, Fga),
+   itera_sobre_perguntas(Fga).
