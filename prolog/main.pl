@@ -65,12 +65,18 @@ impressao_categoria(Opcao) :-
 
 nivel(Acertos, Nivel) :-
     (
-    Acertos =< 2 -> Nivel = "f";
-    Acertos =< 4 -> Nivel = "m";
+    Acertos =< 1 -> Nivel = "f";
+    Acertos =< 3 -> Nivel = "m";
     Nivel = "d"
     ).
 
-indice_aleatorio(Indice) :- random_between(1, 3, Indice).
+indice_aleatorio(Indice, Utilizado) :- 
+    random_between(1, 3, Indice).
+    (
+        Utilizado =:= Indice -> indice_aleatorio(Indice, Utilizado)
+    ).
+
+
 
 impressao_pergunta(Opcao, Nivel, Indice) :-
     questao(Opcao, Nivel, Indice, Pergunta, A, B, C, D, _),
@@ -106,10 +112,12 @@ imprime_resultado(Resultado, Acertos) :-
     write(Errou), nl,
     halt(0).
 
-loop(Opcao, Acertos):-
+loop(Opcao, Acertos, Utilizado):-
       nivel(Acertos, Nivel),
 
-      indice_aleatorio(Indice),
+      indice_aleatorio(Indice, Utilizado),
+
+      Utilizado1 is Utilizado,
 
       impressao_pergunta(Opcao, Nivel, Indice),
 
@@ -124,7 +132,7 @@ loop(Opcao, Acertos):-
 
       (
       Acertos =:= 5 -> halt(0);
-      loop(Opcao, Acertos1)
+      loop(Opcao, Acertos1, Utilizado1)
         
         ).
       
@@ -138,7 +146,8 @@ inicio :-
     impressao_categoria(Opcao),
 
     Acertos is 0,
-    loop(Opcao, Acertos).
+    Utilizado is 0,
+    loop(Opcao, Acertos, Utilizado).
 
 main :-
     inicio,
