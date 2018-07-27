@@ -121,7 +121,13 @@ loop(Opcao, Acertos):-
       verifica_resposta(Resposta, AlternativaCorreta, Resultado),
       Acertos1 is Acertos + 1,
       imprime_resultado(Resultado, Acertos1),
-      loop(Opcao, Acertos1).
+
+      (
+      Acertos =:= 5 -> halt(0);
+      loop(Opcao, Acertos1)
+        
+        ).
+      
 
 inicio :-
     cabecalho,
