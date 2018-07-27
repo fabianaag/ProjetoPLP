@@ -6,7 +6,7 @@ questao_facil_ge("Qual a traducao da palavra inglesa 'horse'?\nA) Casa\nB) Caval
 
 
 lista_perguntas_facil_ge(ListaFacilGe):-
-          findall(Pfg, questao_facil_ge(Pfg, Rfg), ListaFacilGe).
+          findall(Pfg, questao_facil_ge(Pfg, _), ListaFacilGe).
 
 itera_sobre_perguntas([]).
 itera_sobre_perguntas([H|T]):-
@@ -26,7 +26,7 @@ verifica_resposta(Resposta, AlternCorreta, Resultado):-
                   Resposta =:= AlternCorreta -> Resultado = 1; Resultado = 0.
 
 
-continua(R):- R =:= 0 -> writeln("Seu premio foi tanto"), halt(0) ; writeln("haha").
+continua(R):- R =:= 0 -> writeln("Seu premio foi tanto"), halt(0) ; writeln("").
 
 imprime_resultado(R):- R =:= 1 -> writeln("Voce acertou"); writeln("Voce errou!").
 
