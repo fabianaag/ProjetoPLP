@@ -4,6 +4,14 @@
 categoria("1", "Computacao").
 categoria("2", "Conhecimentos Gerais").
 
+premio(0, "R$0,00.", "R$0,00.", "R$0,00.").
+premio(1, "R$1.000,00.", "R$0,00.", "R$0,00.").
+premio(2, "R$10.000,00.", "R$500,00.", "R$1.000,00.").
+premio(3, "R$50.000,00.", "R$5.000,00.", "R$10.000,00.").
+premio(4, "R$100.000,00.", "R$25.000,00.", "R$50.000,00.").
+premio(5, "R$500.000,00.", "R$500.00,00.", "R$100.000,00.").
+premio(6, "1 MILHÃO.", "PERDEU TUDO.", "R$500.000,00.").
+
 questao("1", "f", 1, "Qual o valor em decimal do binario 00000111?", "A) 7", "B) 8", "C) 6", "D) 14", "a").
 questao("1", "f", 2, "Qual alternativa nao contem um Hardware?", "A) Mouse", "B) Processador", "C) Chipset", "D) Debian", "d").
 questao("1", "f", 3, "Principal modulo de um computador, onde estao conectados todos os perifericos:", "A) CPU", "B) Placa mae", "C) Gabinete", "D) Entrada usb", "b").
@@ -87,9 +95,16 @@ verifica_resposta(Resposta, AlternativaCorreta, Resultado) :-
     Resposta =:= AlternativaCorreta -> Resultado = 1;
     Resultado = 0.
 
-imprime_resultado(Resultado) :-
-    Resultado =:= 1 -> writeln("Voce acertou");
-    writeln("Voce errou!"), halt(0).
+imprime_resultado(Resultado, Acertos) :-
+    premio(Acertos, Acertou, Errou, Parou),
+
+    Resultado =:= 1 -> write("Voce acertou!! Ganhou: "),
+    write(Acertou), nl;
+
+    premio(Acertos, Acertou, Errou, Parou),
+    write("Voce errou!!! Ganhou: "),
+    write(Errou), nl,
+    halt(0).
 
 loop(Opcao, Acertos):-
       nivel(Acertos, Nivel),
@@ -104,8 +119,8 @@ loop(Opcao, Acertos):-
       impressao_alternativa_correta(Opcao, Nivel, Indice, AlternativaCorreta),
 
       verifica_resposta(Resposta, AlternativaCorreta, Resultado),
-      imprime_resultado(Resultado),
       Acertos1 is Acertos + 1,
+      imprime_resultado(Resultado, Acertos1),
       loop(Opcao, Acertos1).
 
 inicio :-
